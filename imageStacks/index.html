@@ -3,7 +3,7 @@
 <head>
   <title>First Person BioImage Example</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="resources/w3.css">
+  <link rel="stylesheet" href="../resources/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <style>
   html,body,h1,h2,h3,h4,h5 {font-family: "Lato", sans-serif}
@@ -21,51 +21,44 @@
 <!-- Navbar -->
 <div class = "w3-top" style="margin-top:80px">
   <ul class="w3-navbar w3-left-align w3-light-grey w3-center w3-large">
-    <li class="w3-left" style="width:33% !important"><a href="index.html" class="w3-text-purple">Home</a></li>
+    <li class="w3-left" style="width:33% !important"><a href="../index.html">Home</a></li>
     <li class="w3-dropdown-hover" style="width:33% !important">
-      <a href="imageStacks/index.html" title="Image Stacks">Image Stacks</a>
+      <a href="index.html" title="Image Stacks" class="w3-text-purple">Image Stacks</a>
       <div class="w3-dropdown-content w3-white w3-card-4" style="width:25%">
-        <a href="imageStacks/worms.html">C. Elegans</a>
-        <a href="imageStacks/worms2.html">2 color C. Elegans</a>
-        <a href="imageStacks/organoids.html">Pancreatic Organoids</a>
+        <a href="worms.html">C. Elegans</a>
+        <a href="worms2.html">2 color C. Elegans</a>
+        <a href="organoids.html">Pancreatic Organoids</a>
       </div>
     </li>
-    <li class="w3-left" style="width:33% !important"><a href="about.html">About</a></li>
+    <li class="w3-left" style="width:33% !important"><a href="../about.html">About</a></li>
   </ul>
 </div>
 
+<!-- Content -->
 <!-- Title -->
 <div class="w3-content w3-container w3-center" style="max-width:1100px;margin-top:140px;margin-bottom:80px">
   <div class="w3-section">
-    <h2><b>Home</b></h2>
+    <h2><b>Image Stacks</b></h2>
   </div>
-
-<!-- Content -->
-  <div class="w3-content w3-container" style="max-width:70%; text-align:left">
-    <h4> Welcome </h4>
-    <p>
-      This site showcases images captured with the Optical Projection Tomography (OPT) microscope
-      developed by the Sensors CDT at the University of Cambridge.
-    </p>
 
     <div class="w3-col l6 m6 w3-white w3-padding-small">
       <a href="worms.html">
       <h4 style="text-align:center">C. Elegans
-      <br> <img src="thumbnails/fireWorms.png" width="90%"></h4>
+      <br> <img src="../thumbnails/fireWorms.png" width="90%"></h4>
       </a>
     </div>
 
     <div class="w3-col l6 m6 w3-white w3-padding-small">
       <a href="worms2.html">
       <h4 style="text-align:center">C. Elegans - 2 color
-      <br> <img src="thumbnails/2colorWorms.png" width="90%"></h4>
+      <br> <img src="../thumbnails/2colorWorms.png" width="90%"></h4>
       </a>
     </div>
 
     <div class="w3-col l6 m6 w3-white w3-padding-small">
       <a href="organoids.html">
       <h4 style="text-align:center">Pancreatic Organoids
-      <br> <img src="thumbnails/organoids.png" width="90%"></h4>
+      <br> <img src="../thumbnails/organoids.png" width="90%"></h4>
       </a>
     </div>
   </div>
@@ -73,7 +66,7 @@
 <!-- Footer -->
 <footer class="w3-container w3-padding-hor-32 w3-white w3-center">
   <p> <a href="laser.ceb.cam.ac.uk/directory/marcus-fantham" class="w3-text-purple">&copy; Marcus Fantham </a></p>
-  <img src="resources/sensLogo.png" width="20%" alt="Laser Analytics Group"><img src="resources/cambridgeLogo.png" width="40%" alt="University of Cambridge">
+  <img src="../resources/sensLogo.png" width="20%" alt="Laser Analytics Group"><img src="../resources/cambridgeLogo.png" width="40%" alt="University of Cambridge">
 </footer> <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
