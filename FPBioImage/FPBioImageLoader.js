@@ -1,9 +1,14 @@
-// First, should do some checking of paths: if last character in string is / then remove it!
+// Change pathToImages to an absolute path
+var link = document.createElement("a");
+link.href = pathToImages;
+pathToImages = (link.protocol+"//"+link.host+link.pathname+link.search+link.hash);
+
+// Next, should do some checking of paths: if last character in string is / then remove it!
 if (pathToImages.slice(-1) === "/"){
   pathToImages = pathToImages.slice(0,-1);
 }
-if (pathToFPBioImage.slice(-1) === "/"){
-  pathToFPBioImage = pathToFPBioImage.slice(0,-1);
+if (pathToFPBioimage.slice(-1) === "/"){
+  pathToFPBioimage = pathToFPBioimage.slice(0,-1);
 }
 
 // Now, set memory size for the webpage based on the number of pixels.
@@ -13,7 +18,7 @@ function nextPow2( aSize ){
   return Math.pow( 2, Math.ceil( Math.log( aSize ) / Math.log( 2 ) ) );
 }
 
-firstImage = pathToFPBioImage + "/../" + pathToImages + "/" + imagePrefix + numberingFormat + ".png";
+firstImage = pathToImages + "/" + imagePrefix + numberingFormat + ".png";
 
 var img = new Image();
 
@@ -47,15 +52,15 @@ img.onload = function(){
   TOTAL_MEMORY: memorySize,
   errorhandler: null,
   compatibilitycheck: null,
-  dataUrl: pathToFPBioImage + "/FPBioImage.data",
-  codeUrl: pathToFPBioImage + "/FPBioImage.js",
-  memUrl: pathToFPBioImage + "/FPBioImage.mem",
+  dataUrl: pathToFPBioimage + "/FPBioimage.data",
+  codeUrl: pathToFPBioimage + "/FPBioimage.js",
+  memUrl: pathToFPBioimage + "/FPBioimage.mem",
   };
 
   // Start the viewer by inserting the UnitLoader javascript into the webpage:
   var s = document.createElement("script");
       s.type = "text/javascript";
-      s.src = pathToFPBioImage + "/UnityLoader.js";
+      s.src = pathToFPBioimage + "/UnityLoader.js";
       s.innerHTML = null;
       document.getElementById("scriptLoader").innerHTML = "";
       document.getElementById("scriptLoader").appendChild(s);
